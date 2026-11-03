@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <enum id="org.gnome.shell.extensions.tuke-helper.programme">
+    <value value="0" nick="regular"/>
+    <value value="1" nick="bc-graduating"/>
+    <value value="2" nick="ing-graduating"/>
+  </enum>
+  <schema id="org.gnome.shell.extensions.tuke-helper" path="/org/gnome/shell/extensions/tuke-helper/">
+    <key name="collapsed" type="b">
+      <default>false</default>
+      <summary>Whether the panel only shows the current week</summary>
+    </key>
+    <key name="programme" enum="org.gnome.shell.extensions.tuke-helper.programme">
+      <default>'regular'</default>
+      <summary>Which summer semester schedule applies to the student</summary>
+      <description>Students in the last year of a bachelor's or master's programme have a shorter summer semester.</description>
+    </key>
+  </schema>
+</schemalist>

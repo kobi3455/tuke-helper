@@ -1,0 +1,38 @@
+.tuke-header > StBoxLayout {
+    spacing: 8px;
+}
+
+.tuke-header-arrow {
+    icon-size: 16px;
+}
+
+.tuke-details {
+    padding: 4px 8px 6px;
+    spacing: 6px;
+}
+
+.tuke-details-title {
+    font-weight: bold;
+}
+
+.tuke-details-content {
+    spacing: 8px;
+}
+
+.tuke-section-title {
+    font-weight: bold;
+    padding-top: 6px;
+}
+
+.tuke-row {
+    spacing: 12px;
+}
+
+.tuke-dim {
+    font-size: 0.9em;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.tuke-dim:light {
+    color: rgba(0, 0, 0, 0.6);
+}
