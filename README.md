@@ -20,7 +20,7 @@ The schedule is reloaded every hour and from the refresh button in the panel.
 
 ## Requirements
 
-- GNOME Shell 49 or higher.
+- GNOME Shell 47 or higher (e.g. Rocky Linux / RHEL 10).
 
 ## Installation
 

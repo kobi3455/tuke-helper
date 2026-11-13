@@ -1,3 +1,4 @@
+import Clutter from 'gi://Clutter';
 import GObject from 'gi://GObject';
 import Gio from 'gi://Gio';
 const Config = await import("resource:///org/gnome/shell/misc/config.js").catch(async () => await import("resource:///org/gnome/Shell/Extensions/js/misc/config.js"));
@@ -44,6 +45,15 @@ export function get_extension_uuid() {
 export function get_shell_version() {
     const [major, minor] = Config.PACKAGE_VERSION.split('.').map(s => Number(s));
     return { major, minor };
+}
+/**
+ * St.BoxLayout properties for the given direction. GNOME 48 replaced the
+ * `vertical` property with `orientation`; older versions only know `vertical`.
+ */
+export function box_orientation(vertical) {
+    if (get_shell_version().major >= 48)
+        return { orientation: vertical ? Clutter.Orientation.VERTICAL : Clutter.Orientation.HORIZONTAL };
+    return { vertical };
 }
 export function add_named_connections(injector, object) {
     // this is used to debug things

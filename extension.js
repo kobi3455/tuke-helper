@@ -9,6 +9,7 @@ import {Extension, gettext as _, ngettext} from 'resource:///org/gnome/shell/ext
 
 import * as Schedule from './schedule.js';
 import {LibPanel, Panel} from './libs/libpanel/main.js';
+import {box_orientation} from './libs/libpanel/utils.js';
 
 // The schedule rarely changes, but the week and the countdowns move on
 const REFRESH_INTERVAL_SECONDS = 60 * 60;
@@ -99,7 +100,7 @@ class Details extends St.BoxLayout {
     _init(refresh) {
         super._init({
             style_class: 'tuke-details',
-            orientation: Clutter.Orientation.VERTICAL,
+            ...box_orientation(true),
             x_expand: true,
         });
 
@@ -123,7 +124,7 @@ class Details extends St.BoxLayout {
         this.add_child(titleBox);
 
         this._content = new St.BoxLayout({
-            orientation: Clutter.Orientation.VERTICAL,
+            ...box_orientation(true),
             style_class: 'tuke-details-content',
         });
         this.add_child(this._content);
@@ -198,7 +199,7 @@ class Details extends St.BoxLayout {
         row.add_child(labelBox);
 
         const valueBox = new St.BoxLayout({
-            orientation: Clutter.Orientation.VERTICAL,
+            ...box_orientation(true),
             style_class: 'tuke-row-value',
         });
         valueBox.add_child(new St.Label({

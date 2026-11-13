@@ -2,7 +2,7 @@
     "uuid": "tuke-helper@kobi3455.github.io",
     "name": "TUKE Helper",
     "description": "Shows the current week of the semester at TUKE, the end of teaching, the exam period and upcoming events in a collapsible Quick Settings panel. Data comes from schedule.kpi.fei.tuke.sk.",
-    "shell-version": ["49", "50", "51"],
+    "shell-version": ["47", "48", "49", "50", "51"],
     "url": "https://github.com/kobi3455/tuke-helper",
     "settings-schema": "org.gnome.shell.extensions.tuke-helper",
     "gettext-domain": "tuke-helper@kobi3455.github.io"
